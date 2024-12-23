@@ -1,3 +1,5 @@
+import './styles.css';
+
 export default function DisplayTask(props) {
     const arr = props.data || []; // Fallback to an empty array if no data is provided
 
@@ -20,5 +22,7 @@ export default function DisplayTask(props) {
         </li>
     ));
 
-    return <ol id='items'>{listItems}</ol>;
+    return <div id='items'>
+     <ol>{listItems}</ol>
+     </div>
 }

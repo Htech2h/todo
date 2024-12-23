@@ -7,8 +7,8 @@ import DisplayTask from './componenets/displayTask';
 function App() {
   // Initialize tasks with unique ids
   const [arr, setArr] = useState([
-    { id: 1, todo: 'Eat', isComplete: true },
-    { id: 2, todo: 'Run', isComplete: false },
+    { id: 1, todo: 'wake-up', isComplete: true },
+    { id: 2, todo: 'eat', isComplete: false },
   ]);
 
   // Toggle Task Completion
@@ -25,10 +25,15 @@ function App() {
     setArr((prevArr) => prevArr.filter((task) => task.id !== id));
   }
 
+  //adding task
+  function addTask(task){
+    setArr([...arr,task]);
+  }
+
   return (
     <div className="App">
       <h1>My Todo List</h1>
-      <AddTask />
+      <AddTask handleSubmit={addTask} />
       <DisplayTask data={arr} onToggle={handleCheckbox} onDelete={handleDelete} />
     </div>
   );

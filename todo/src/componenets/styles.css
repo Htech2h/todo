@@ -20,6 +20,23 @@
     color: lawngreen;
 }
 
-ol{
-    list-style-type: none;
-}
+#items {
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center the list horizontally */
+    align-items: center; /* Center the list vertically */
+    
+    text-align: center; /* Center text inside the list items */
+  }
+  
+  #items ol {
+    list-style-type: lower-alpha; /* Alphabetic list numbering */
+    padding-left: 20px; /* Adjust space for the alphabet markers */
+  }
+  
+  #items li {
+    margin: 10px 0; /* Space between list items */
+    text-align: justify;
+  }
+  
+  
+  
