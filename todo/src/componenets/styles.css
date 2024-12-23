@@ -1,0 +1,25 @@
+#text{
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+#button{
+    background-color: lawngreen;
+    border: none;
+    border-radius: 15px;
+    width: 50px;
+    height: 30px;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+#button:hover{
+    background-color: #333;
+    color: lawngreen;
+}
+
+ol{
+    list-style-type: none;
+}
