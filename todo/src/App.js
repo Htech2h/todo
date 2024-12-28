@@ -10,6 +10,7 @@ function App() {
     { id: 1, todo: 'wake-up', isComplete: true },
     { id: 2, todo: 'eat', isComplete: false },
   ]);
+  const [theme,setTheme] = useState(true);
 
   // Toggle Task Completion
   function handleCheckbox(id) {
@@ -29,9 +30,16 @@ function App() {
   function addTask(task){
     setArr([...arr,task]);
   }
+//to allow user to switch between dark and light mode
+  function Theme(){
+    setTheme(!theme);
+  }
+
+  //make sure completed tasks go to the bottom to minimiz
 
   return (
-    <div className="App">
+    <div style={{backgroundColor:theme? '#333':'#fff',color: theme?'white':'#444'}} className="App">
+      <button onClick={Theme}  >@</button>
       <h1>My Todo List</h1>
       <AddTask handleSubmit={addTask} />
       <DisplayTask data={arr} onToggle={handleCheckbox} onDelete={handleDelete} />

@@ -1,5 +1,11 @@
+button{
+  border: none;
+  border-radius: 8px;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
 }
 
 h1{
